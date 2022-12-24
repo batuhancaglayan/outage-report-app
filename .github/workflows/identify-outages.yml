@@ -23,4 +23,4 @@ jobs:
       - name: NPM Install
         run: npm install
       - name: NPM Start
-        run: npm Start
+        run: npm start
