@@ -1,0 +1,23 @@
+{
+  "name": "outage-report-app",
+  "version": "1.0.0",
+  "description": "outage-report-app",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batuhancaglayan/outage-report-app.git"
+  },
+  "keywords": [],
+  "author": "Batuhan Çağlayan",
+  "bugs": {
+    "url": "https://github.com/batuhancaglayan/outage-report-app/issues"
+  },
+  "homepage": "https://github.com/batuhancaglayan/outage-report-app#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "typescript": "^4.9.4"
+  }
+}
