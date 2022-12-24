@@ -66,6 +66,7 @@ export class DefaultOutageManager implements OutageManager{
             }
 
             /**
+             * Not actually needed for this small project.
              * If more than MAX_ARRAY_PROCESS_SIZE item processing,
              * put a small breath task for do not block event loop.
              */

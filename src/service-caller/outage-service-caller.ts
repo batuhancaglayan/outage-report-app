@@ -57,6 +57,10 @@ export class DefaultOutageServiceCaller implements OutageServiceCaller {
             });
         }
 
+        /**
+         * A small code base retry logic added for report outages phase. (for bonus requirement) (If we consider this application to
+         * be started by a trigger (like a queue message), retry logic can be designed with queue retry policies.) 
+         */
         let retry = 0;
         return new Promise<void>((resolve, reject) => {
             const request = () => {
