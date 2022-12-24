@@ -6,10 +6,9 @@ on:
 env:  
   OUTAGE_SERVICE_URL: ${{ secrets.OUTAGE_SERVICE_URL }}
   OUTAGE_SERVICE_API_KEY: ${{ secrets.OUTAGE_SERVICE_API_KEY }}
-  LOG_LEVEL: debug
 
 jobs:
-  build-test:
+  identify-outages:
     runs-on: ubuntu-latest
     strategy:
       matrix:
