@@ -23,5 +23,7 @@ jobs:
         run: npm install
       - name: NPM Build
         run: npm run build
+      - name: NPM Lint
+        run: npm run lint
       - name: NPM Test
         run: npm run test

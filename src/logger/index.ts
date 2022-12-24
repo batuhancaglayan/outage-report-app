@@ -1,7 +1,6 @@
 import { LogLevel } from '../types';
 import { LOG_LEVEL } from '../constants';
-
-const logger = require('npmlog');
+import logger from 'npmlog';
 
 logger.addLevel('debug', 1600, { fg: 'green' });
 logger.level = process.env[LOG_LEVEL] ?
@@ -10,7 +9,7 @@ logger.disableColor();
 
 export default {
     getLogLevel: (): LogLevel => {
-        return logger.level;
+        return logger.level as LogLevel;
     },
     setLogLevel: (logLevel: LogLevel) => {
         logger.level = logLevel;

@@ -9,7 +9,6 @@ import {
     RETRY_COUNT,
     RETRY_DELAY,
 } from '../constants';
-import Logger from '../logger';
 
 const headers = {
     'x-api-key': AppConfig.outageServiceApiKey
@@ -62,7 +61,7 @@ export class DefaultOutageServiceCaller implements OutageServiceCaller {
         return new Promise<void>((resolve, reject) => {
             const request = () => {
                 makeRequest()
-                .then(response => resolve())
+                .then(() => resolve())
                 .catch(err => {
                     if (retry >= RETRY_COUNT) {
                         reject(err);
