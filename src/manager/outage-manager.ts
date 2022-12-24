@@ -31,12 +31,12 @@ export class DefaultOutageManager implements OutageManager{
             this.outageService.getSiteInfo(siteName)]);
 
         if (!outages) {
-            Logger.debug('<DefaultOutageManager> There are no received outages.');
+            Logger.info('<DefaultOutageManager> There are no received outages.');
             return;
         }
 
         if (!siteInfo) {
-            Logger.debug(`<DefaultOutageManager> There is no received site info for: ${siteName}`);
+            Logger.info(`<DefaultOutageManager> There is no received site info for: ${siteName}`);
             return;
         }
 

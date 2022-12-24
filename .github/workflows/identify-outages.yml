@@ -6,6 +6,7 @@ on:
 env:  
   OUTAGE_SERVICE_URL: ${{ secrets.OUTAGE_SERVICE_URL }}
   OUTAGE_SERVICE_API_KEY: ${{ secrets.OUTAGE_SERVICE_API_KEY }}
+  LOG_LEVEL: info
 
 jobs:
   identify-outages:
