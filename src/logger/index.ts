@@ -5,7 +5,7 @@ const logger = require('npmlog');
 
 logger.addLevel('debug', 1600, { fg: 'green' });
 logger.level = process.env[LOG_LEVEL] ?
-    process.env[LOG_LEVEL].toLowerCase() : 'debug';
+    process.env[LOG_LEVEL].toLowerCase() : 'error';
 logger.disableColor();
 
 export default {
