@@ -38,11 +38,27 @@ describe('Outage Service Unit Test', () => {
         chai.expect(JSON.stringify(outages)).equals(JSON.stringify(MockData.outages));
     })
 
+    it('Verify Error on Get Outages', async () => {
+        sandbox.stub(ServiceCaller, 'request')
+        .callsFake(async () => { throw new ServiceCallerError('test 401', 401) });
+        await outageService.getAllOutages().catch(err => {
+            chai.expect(err.status).equals(401);
+        });
+    })
+
     it('Verify Get Site Info', async () => {
         const stub = sandbox.stub(DefaultOutageServiceCaller.prototype, 'getSiteInfo').callsFake(async () => MockData.siteInfo);
         const siteInfo = await outageService.getSiteInfo(siteName);
         chai.expect(stub.withArgs(siteName).calledOnce).equals(true);
         chai.expect(JSON.stringify(siteInfo)).equals(JSON.stringify(MockData.siteInfo));
+    })
+
+    it('Verify Error on Get Site Info', async () => {
+        sandbox.stub(ServiceCaller, 'request')
+        .callsFake(async () => { throw new ServiceCallerError('test 401', 401) });
+        await outageService.getSiteInfo(siteName).catch(err => {
+            chai.expect(err.status).equals(401);
+        });
     })
 
     it('Verify Report Site Outage', async () => {

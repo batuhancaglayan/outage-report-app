@@ -40,8 +40,7 @@ export default class ServiceCaller {
         throw new ServiceCallerError(response.statusText, response.status);
       }).catch((requestError) => {
         Logger.error('<ServiceCaller> An error occured while calling service.', requestError);
-        return null;
-        // ServiceCaller.throwError(requestError.message);
+        throw new ServiceCallerError(requestError.message);
       });
     }
 }
