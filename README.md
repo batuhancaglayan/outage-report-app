@@ -30,6 +30,8 @@ Using with build-test workflow, you can run tests.
 
 Help with identify-outages workflow, you can execute project.
 
+`Note:` If you want to run tests or execute project via Github action, i will add user as contributer to repo, please share related Github user with me.
+
 ### Local
 
 #### Clone repo
