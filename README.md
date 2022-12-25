@@ -48,8 +48,8 @@ npm install
 
 Apikey and service endpoint value are not hardcoded. You need to set required environment variables before running project.
 
-export OUTAGE_SERVICE_URL=<SERVICE_URL>
-export OUTAGE_SERVICE_API_KEY=<YOUR_API_KEY>
+- export OUTAGE_SERVICE_URL=<SERVICE_URL>
+- export OUTAGE_SERVICE_API_KEY=<YOUR_API_KEY>
 
 ```bash
 npm start
